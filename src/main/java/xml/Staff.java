@@ -6,7 +6,7 @@ public class Staff extends Person {
         super(firstName, lastName, phoneNumber, email);
     }
 
-    public Staff(){
+    public Staff() {
 
     }
 

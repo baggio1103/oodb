@@ -10,13 +10,14 @@ public class Hotel {
 
     private Reception reception;
 
-    public Hotel(String name, int stars, Reception reception){
+    public Hotel(String name, int stars, Reception reception) {
         this.name = name;
         this.stars = stars;
         this.reception = reception;
     }
 
-    public Hotel(){}
+    public Hotel() {
+    }
 
     @XmlElement(name = "reception")
     public Reception getReception() {

@@ -10,7 +10,7 @@ public class Room {
     private Client client;
     private boolean isReserved;
 
-    public Room(int number, double cost, int roomCount){
+    public Room(int number, double cost, int roomCount) {
         this.number = number;
         this.cost = cost;
         this.roomCount = roomCount;
@@ -18,7 +18,7 @@ public class Room {
         this.client = null;
     }
 
-    public Room(){
+    public Room() {
 
     }
 

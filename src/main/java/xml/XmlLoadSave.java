@@ -8,7 +8,7 @@ import java.io.File;
 
 public class XmlLoadSave {
 
-    public static Hotel loadHotel(String path){
+    public static Hotel loadHotel(String path) {
         Hotel hotel;
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(Hotel.class);
@@ -16,7 +16,7 @@ public class XmlLoadSave {
 
             hotel = (Hotel) unmarshaller.unmarshal(new File(path));
             return hotel;
-        }catch (JAXBException exception){
+        } catch (JAXBException exception) {
             exception.printStackTrace();
         }
         return null;

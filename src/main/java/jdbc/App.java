@@ -41,7 +41,6 @@ public class App {
         long completedTime = System.currentTimeMillis();
         long dif = completedTime - start;
         System.out.println("Time elapsed for jsonb: " + dif);
-
     }
 
     public static Connection connect(){
