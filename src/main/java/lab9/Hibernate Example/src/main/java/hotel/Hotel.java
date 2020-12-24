@@ -1,24 +1,16 @@
-package lab8.hotel;
+package hotel;
 
-import lab6.annotation.ManyToOne;
-import lab8.annotation.Column;
-import lab8.annotation.Entity;
-import lab8.annotation.Id;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
-public class Staff implements BaseEntity{
-
+public class Hotel{
     @Id
     private Long id;
-
-    @Column
     private String name;
-
-    @Column
-    private String email;
-
-    @Column
-    @ManyToOne
+    private Long stars;
+    @OneToOne
     private Reception reception;
 
     public Long getId() {
@@ -37,12 +29,12 @@ public class Staff implements BaseEntity{
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public Long getStars() {
+        return stars;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setStars(Long stars) {
+        this.stars = stars;
     }
 
     public Reception getReception() {
@@ -58,14 +50,13 @@ public class Staff implements BaseEntity{
         return "" + id + "";
     }
 
-
     public String getDescription() {
-        return "Staff{" +
+        return "Hotel{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
+                ", stars=" + stars +
                 ", reception=" + reception.getDescription() +
                 '}';
     }
 
-    }
+}

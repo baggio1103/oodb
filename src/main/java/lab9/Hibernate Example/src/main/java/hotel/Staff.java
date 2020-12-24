@@ -1,23 +1,15 @@
-package lab8.hotel;
+package hotel;
 
-import lab6.annotation.ManyToOne;
-import lab8.annotation.Column;
-import lab8.annotation.Entity;
-import lab8.annotation.Id;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
-public class Staff implements BaseEntity{
-
+public class Staff {
     @Id
     private Long id;
-
-    @Column
     private String name;
-
-    @Column
     private String email;
-
-    @Column
     @ManyToOne
     private Reception reception;
 
@@ -68,4 +60,4 @@ public class Staff implements BaseEntity{
                 '}';
     }
 
-    }
+}

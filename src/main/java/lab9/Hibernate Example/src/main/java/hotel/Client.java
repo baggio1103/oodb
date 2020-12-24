@@ -1,25 +1,25 @@
-package lab8.hotel;
+package hotel;
 
-import lab6.annotation.ManyToOne;
-import lab8.annotation.Column;
-import lab8.annotation.Entity;
-import lab8.annotation.Id;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
-public class Staff implements BaseEntity{
+public class Client {
 
     @Id
     private Long id;
-
-    @Column
     private String name;
-
-    @Column
     private String email;
+    private int roomCount;
 
-    @Column
-    @ManyToOne
-    private Reception reception;
+    public Client() {
+    }
+
+    public Client(Long id, String name, int roomCount, double cash) {
+        this.id = id;
+        this.name = name;
+        this.roomCount = roomCount;
+    }
 
     public Long getId() {
         return id;
@@ -45,12 +45,12 @@ public class Staff implements BaseEntity{
         this.email = email;
     }
 
-    public Reception getReception() {
-        return reception;
+    public int getRoomCount() {
+        return roomCount;
     }
 
-    public void setReception(Reception reception) {
-        this.reception = reception;
+    public void setRoomCount(int roomCount) {
+        this.roomCount = roomCount;
     }
 
     @Override
@@ -58,14 +58,13 @@ public class Staff implements BaseEntity{
         return "" + id + "";
     }
 
-
     public String getDescription() {
-        return "Staff{" +
+        return "Client{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", reception=" + reception.getDescription() +
+                ", email=" + email +
+                ", room_count=" + roomCount +
                 '}';
     }
 
-    }
+}

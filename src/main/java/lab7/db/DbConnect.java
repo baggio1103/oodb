@@ -8,7 +8,7 @@ public class DbConnect {
 
     private static final String url = "jdbc:postgresql://localhost/hotel";
     private static final String user = "postgres";
-    private static final String password = "*********";
+    private static final String password = "xdubivxb";
 
     private static Connection connection;
 
